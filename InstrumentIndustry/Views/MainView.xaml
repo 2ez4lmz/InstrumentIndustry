@@ -1,0 +1,19 @@
+﻿<Window x:Class="InstrumentIndustry.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:cc="clr-namespace:InstrumentIndustry.Views.CustomControls"
+        xmlns:views="clr-namespace:InstrumentIndustry.Views"
+        xmlns:vm="clr-namespace:InstrumentIndustry.ViewModels"
+        mc:Ignorable="d"
+        Title="ООО СХС" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <cc:SideMenuControl x:Name="MenuList" FontSize="20" SelectedIndex="0" SelectionChanged="SideMenuControl_SelectionChanged"/>       
+        <Frame x:Name="frame" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
